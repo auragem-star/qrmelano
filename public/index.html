@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/app.css">
+<title>QR Melano — Free QR code generator</title>
+<meta name="description" content="Free QR code generator: websites, PDFs, vCards, WhatsApp, Wi-Fi, menus, coupons and more — in your brand colors with your logo. No sign-up.">
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a class="logo" href="/"><span class="logo-mark"><i></i></span><span>QR Melano</span></a>
+    <nav class="nav-links"><a class="btn btn-primary btn-sm" href="/create.html">Create QR code</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="pill pill-brand">Free · No sign-up · Nothing uploaded</span>
+      <h1>Branded QR codes, <em>ready to print</em> in seconds.</h1>
+      <p class="lead">Websites, PDFs, business cards, WhatsApp, Wi-Fi, menus, coupons and more — in your colors, with your logo, as print-ready SVG or high-resolution PNG.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="/create.html">Create your QR code</a>
+        <a class="btn btn-ghost btn-lg" href="#types">See all types</a>
+      </div>
+    </div>
+    <div class="hero-qr"><div id="heroQr"></div></div>
+  </div>
+</section>
+
+<section class="section band" id="types">
+  <div class="container">
+    <h2>18 types of QR code</h2>
+    <p class="sub">Choose a type and get your styled QR code instantly.</p>
+    <div class="types" id="typeGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Built for print &amp; digital</h2>
+    <p class="sub">Everything happens in your browser.</p>
+    <div class="features">
+      <div class="card feature"><div class="ic">🎨</div><h3>Your brand</h3><p>Your colors, dot styles and your logo in the middle.</p></div>
+      <div class="card feature"><div class="ic">🖨️</div><h3>Print-ready files</h3><p>SVG for designers and Illustrator, or 2000 px PNG / JPG.</p></div>
+      <div class="card feature"><div class="ic">📱</div><h3>Mobile landing pages</h3><p>Menus, business info, coupons, events and link lists open as clean mobile pages.</p></div>
+      <div class="card feature"><div class="ic">⚡</div><h3>No sign-up</h3><p>Pick a type, fill in the details, download. That's it.</p></div>
+      <div class="card feature"><div class="ic">♾️</div><h3>Never expires</h3><p>Codes don't depend on any account or subscription — they keep working.</p></div>
+      <div class="card feature"><div class="ic">🔒</div><h3>Private</h3><p>No database and no uploads: your content and logo never leave your device.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section band faq">
+  <div class="container narrow-lg">
+    <h2>Questions</h2>
+    <details><summary>Is it free?</summary><p>Yes, completely. No account, no limits.</p></details>
+    <details><summary>Can I change a code after printing it?</summary><p>No — the content is stored inside the code itself. Tip: for things that change often (prices, offers), point the QR to a page on your own website and update that page instead.</p></details>
+    <details><summary>Which file should I send to the printer?</summary><p>SVG. It stays sharp at any size and opens in Adobe Illustrator. Use PNG for social media and screens.</p></details>
+    <details><summary>How small can I print it?</summary><p>Keep it at least 2 × 2 cm, and 3 × 3 cm or more for codes with a lot of content or a logo. Always test with a phone before printing.</p></details>
+  </div>
+</section>
+
+<footer class="footer"><div class="container footer-row"><span>© QR Melano</span><span>Developed by <b>Mahmoud Saeid</b></span></div></footer>
+
+<script src="/vendor/qr-code-styling.js"></script>
+<script type="module" src="/js/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/app.css">
+<title>Create QR code — QR Melano</title>
+<meta name="description" content="Create a free branded QR code — website, PDF, vCard, WhatsApp, Wi-Fi, menu and more.">
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a class="logo" href="/"><span class="logo-mark"><i></i></span><span>QR Melano</span></a>
+    <nav class="nav-links"><a class="btn btn-ghost btn-sm" href="/">← Home</a></nav>
+  </div>
+</header>
+
+<main class="page"><div class="container">
+  <div class="steps">
+    <button class="step" type="button" data-step="1" id="stepBack">1 · Type</button>
+    <span class="step" data-step="2">2 · Content &amp; design</span>
+  </div>
+
+  <section id="stepType" class="hidden">
+    <h1 class="page-title">Select a type of QR code</h1>
+    <div class="types" id="typeGrid"></div>
+  </section>
+
+  <section id="stepBuild" class="hidden">
+    <div class="builder">
+        <div class="card" id="contentCard">
+          <div class="build-head">
+            <div class="build-title"><span class="ic" id="typeIcon"></span><h2 id="typeTitle"></h2></div>
+            <button class="btn btn-ghost btn-sm" id="changeType" type="button">Change type</button>
+          </div>
+          <p class="note" id="kindNote"></p>
+          <div id="form"></div>
+        </div>
+
+        <div class="card" id="design">
+          <div class="build-head"><h2>Design</h2><button class="btn btn-ghost btn-sm" id="resetDesign" type="button">Reset</button></div>
+          <div class="row2">
+            <div class="field"><label class="f" for="fg">Dots color</label><input class="input color" type="color" id="fg"></div>
+            <div class="field"><label class="f" for="eye">Corners color</label><input class="input color" type="color" id="eye"></div>
+            <div class="field"><label class="f" for="bg">Background</label><input class="input color" type="color" id="bg"></div>
+            <div class="field" id="pageColorField"><label class="f" for="pageColor">Landing page color</label><input class="input color" type="color" id="pageColor"></div>
+          </div>
+          <div id="contrastWarn" class="alert alert-warn hidden">Low contrast — some phones may not read this code. Use dark dots on a light background.</div>
+          <div class="field"><label class="f">Quick colors</label><div class="swatches" id="swatches"></div></div>
+          <div class="field"><label class="f">Dots</label><div class="opt-grid" data-opt="dots"></div></div>
+          <div class="field"><label class="f">Corner frames</label><div class="opt-grid" data-opt="corners"></div></div>
+          <div class="field"><label class="f">Corner centers</label><div class="opt-grid" data-opt="cornerDots"></div></div>
+          <div class="field"><label class="f" for="logo">Logo in the middle</label>
+            <input class="input" type="file" id="logo" accept="image/png,image/jpeg,image/webp">
+            <div class="hint">PNG with a transparent background works best. Max 1 MB. Your logo stays on your computer — nothing is uploaded.</div>
+            <div id="logoState"></div>
+          </div>
+        </div>
+
+      <aside class="preview">
+        <div class="qr-box" id="preview"></div>
+        <p class="muted preview-info" id="previewInfo"></p>
+        <div id="density" class="hidden"></div>
+        <div class="field" style="text-align:left"><label class="f" for="fileName">File name</label><input class="input" id="fileName" maxlength="60"></div>
+        <div id="dlMsg"></div>
+        <button class="btn btn-primary btn-block btn-lg" type="button" data-dl="png" disabled>Download PNG</button>
+        <div class="row2" style="margin-top:8px">
+          <button class="btn btn-ghost" type="button" data-dl="svg" disabled>SVG (for print)</button>
+          <button class="btn btn-ghost" type="button" data-dl="jpeg" disabled>JPG</button>
+        </div>
+        <div class="row2" style="margin-top:8px">
+          <a class="btn btn-ghost btn-sm hidden" id="testLink" target="_blank" rel="noopener noreferrer">Test link ↗</a>
+          <button class="btn btn-ghost btn-sm hidden" id="copyLink" type="button">Copy link</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+</div></main>
+<footer class="footer"><div class="container footer-row"><span>© QR Melano</span><span>Developed by <b>Mahmoud Saeid</b></span></div></footer>
+
+<script src="/vendor/fflate.js"></script>
+<script src="/vendor/qr-code-styling.js"></script>
+<script type="module" src="/js/create.js"></script>
+</body>
+</html>
